@@ -49,7 +49,26 @@
     <div class="card">
       <h3>SDG Warriors</h3>
       <p>Climate, Health, Heritage</p>
-      <a href="/cohorts/sdg-warriors.html" class="btn" style="font-size:0.9rem;">Join Now</a>
+      <div style="text-align:center; margin:30px 0;">
+  <input type="text" id="sdgCode" placeholder="Enter your ASK-20251117-XXX code" 
+         style="padding:14px; width:70%; max-width:320px; font-size:16px; border:2px solid #8B5A2B; border-radius:8px;">
+  <br><br>
+  <button onclick="checkSDGCode()" 
+          style="padding:14px 32px; background:#8B5A2B; color:white; border:none; font-size:18px; cursor:pointer; border-radius:8px; font-weight:bold;">
+    Cross the Threshold
+  </button>
+</div>
+
+<script>
+function checkSDGCode() {
+  const input = document.getElementById('sdgCode').value.trim();
+  if (/^ASK-\d{8}-\d{1,3}$/.test(input)) {
+    window.location = '/cohorts/sdg-warriors.html';
+  } else {
+    alert('Invalid code! Check your email for the exact ASK-20251117-XXX code.');
+  }
+}
+</script>
     </div>
     <div class="card">
       <h3>Soft Skills Lab</h3>
